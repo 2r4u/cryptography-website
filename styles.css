@@ -8,15 +8,39 @@ body{
     color: white;
     font-family: "Dank Mono",ui-monospace,monospace;
 }
+#div1{
+    height: 90vh;
+}
+#div2{
+    height: 40vh;
+    animation: 6s 5s fadeinout both;
+    /*look into using scrollmagic library to animate stuff*/
+}
 h1{
+    padding-top: 20%;
     font-size: xx-large;
     font-weight: 600;
     font-size: 250%;
-    padding-top: 40%;
+    text-align: center;
+    animation: fadein 2s;
+}
+h3{
     text-align: center;
 }
 st{
-
+    animation: 2s 1.5s fadein both;
     display: block;
     text-align: center;
+    
+}
+p{
+    text-align: center;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes fadeinout{
+    0%,100%{opacity: 0;}
+    50%  {opacity: 1;}
 }

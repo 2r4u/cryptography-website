@@ -28,7 +28,7 @@ function encrypt(ele){
 function mouseAction(e){
     for(let ele of elements){
         // console.log(calculateDistance(maintitle, e.clientX, e.clientY));
-        if(calculateDistance(ele,e.clientX,e.clientY)<100){
+        if(calculateDistance(ele,e.clientX,e.clientY)<150){
             console.log(ele.getAttribute("data-key"));
             ele.innerHTML=ogtext[ele.getAttribute("data-key")];
         }
@@ -38,7 +38,11 @@ function mouseAction(e){
     }
     
 }
-
+document.onload =function(){
+    for(let ele of elements){
+        encrypt(ele);
+    }
+}
 document.onmousemove =function(e){
     console.log(e.clientX, e.clientY);
     mouseAction(e);

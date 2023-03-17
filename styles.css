@@ -4,15 +4,19 @@ html{
 }
 body{
     margin: auto;
-    padding: 10%;
-    padding-top: 40%;
     background-color: black;
     color: white;
-    text-align: center;
     font-family: "Dank Mono",ui-monospace,monospace;
 }
-h{
+h1{
     font-size: xx-large;
     font-weight: 600;
     font-size: 250%;
+    padding-top: 40%;
+    text-align: center;
+}
+st{
+
+    display: block;
+    text-align: center;
 }

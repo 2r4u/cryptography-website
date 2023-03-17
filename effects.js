@@ -1,12 +1,14 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const maintitle = document.getElementById("title");
+const elements = Array.from(document.querySelectorAll("[data-key]"));
 
+//dictionary that
 const ogtext ={
-    t1:maintitle.innerHTML
+    t1:document.getElementById("title").innerHTML,
+    st1:document.getElementById("st1").innerHTML,
 }
+
 function calculateDistance(elem, mouseX, mouseY) {
-    //fix this by using new way to get positioning
-    return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
+    return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offsetLeft+(elem.offsetWidth/2)), 2) + Math.pow(mouseY - (elem.offsetTop+(elem.offsetHeight/2)), 2)));
 }
 
 function encrypt(ele){
@@ -23,25 +25,24 @@ function encrypt(ele){
     ele.innerHTML=ectext;
 }
 
-function decrypt(ele){
-    let text = ele.innerHTML;
-
-}
-document.onload = function(){
-    encrypt(this.getElementById("title"));
+function mouseAction(e){
+    for(let ele of elements){
+        // console.log(calculateDistance(maintitle, e.clientX, e.clientY));
+        if(calculateDistance(ele,e.clientX,e.clientY)<100){
+            console.log(ele.getAttribute("data-key"));
+            ele.innerHTML=ogtext[ele.getAttribute("data-key")];
+        }
+        else{
+            encrypt(ele);
+        }
+    }
+    
 }
 
 document.onmousemove =function(e){
     console.log(e.clientX, e.clientY);
-    console.log(calculateDistance(this, e.clientX, e.clientY));
+    mouseAction(e);
     
-    // if(calculateDistance(maintitle,e.clientX,e.clientY)<9999999){
-        
-    //     encrypt(this);
-    // }
-    // else{
-    //     this.innerHTML=ogtext.t1;
-    // }
 }
 
 

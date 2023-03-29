@@ -1,7 +1,7 @@
 let buttons = new Map();
 console.log(buttons);
 function home(){
-    window.location.href="main.html";
+    window.location.href="index.html";
 }
 function cb(){
     window.location.href="bc.html"

@@ -1,0 +1,112 @@
+html{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    background-color: black;
+    background: url("ww2\ world\ map.png") no-repeat center center fixed;
+    background-size: cover;
+}
+body{
+    color: white;
+    font-family: "Dank Mono",ui-monospace,monospace;
+    
+}
+#home{
+    animation: 5s 4s fadein both;
+    border: 3px solid white;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "Dank Mono",ui-monospace,monospace;
+}
+#code-breaking{
+    background-image: url("https://cdn.britannica.com/15/25015-050-180E683B/computer-Colossus-Bletchley-Park-Buckinghamshire-England-Funding-1943.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; top: 20%; left: 35%;
+}
+#war-in-europe{
+    background-image: url("http://ebrahimataee.ir/wp-content/uploads/2018/06/IMG_7150-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; top: 16%; left: 52%;
+}
+#war-in-north-africa{
+    background-image: url("https://media.defense.gov/2007/Sep/18/2000450331/2000/2000/0/070918-F-1234S-004.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; top: 27%; left: 48%;
+}
+#enigma-machine{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/74/Bundesarchiv_Bild_101I-241-2173-09%2C_Russland%2C_Verschl%C3%BCsselungsger%C3%A4t_Enigma.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; top: 16%; left: 46%;
+    
+}
+#solving-the-enigma{
+    background-image: url("https://media.defense.gov/2007/Sep/18/2000450326/2000/2000/0/070918-F-1234S-006.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; top: 13%; left: 40%;
+}
+#alan-turing{
+    background-image: url("https://cdn.britannica.com/81/191581-050-8C0A8CD3/Alan-Turing.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; top: 5%; left: 42%;
+}
+#war-in-the-pacific{
+    background-image: url("https://media.defense.gov/2007/Sep/18/2000450320/1200/1200/0/070918-F-1234S-008.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; top: 24%; left: 86%;
+}
+#navajo-code-talkers{
+    background-image: url("http://www.inquiriesjournal.com/article-images/uid-34-1066258177-1226/731a8d.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; top: 30%; left: 80%;
+}
+#impact-on-technology{
+    background-image: url("https://aibc.world/wp-content/uploads/2022/03/cryptography.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; top: 18%; left: 20%;
+}
+
+button.img{
+    position: absolute;
+    border: 3px solid white;
+    background-color: black;
+    color: white;
+}
+.img{
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+}
+
+
+/*animation definitions*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes fadeinout{
+    0%,100%{opacity: 0;}
+    50%  {opacity: 1;}
+}
